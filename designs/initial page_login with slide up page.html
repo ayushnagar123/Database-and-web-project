@@ -1,0 +1,98 @@
+<html>
+<head>
+<style>
+@keyframes example {
+    0%   {background-color: red;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+body{
+	margin :0px;
+}
+#login{
+background-color: green;
+	width:100vw;
+	height:100vh;
+	margin-top: 0vh;
+	position: absolute;
+	color: white;
+
+}
+#circ_but{
+	
+    border-radius: 100%;
+    margin-top:40vh;
+    border:1px dotted black;
+    color: white;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    
+
+}
+#initial
+{
+	background-color: brown;
+	width:100vw;
+	height:100vh;
+	
+}
+</style>
+</head>
+<body>
+<script>
+
+var login;
+var initial;
+var but;
+function zoom(z1)
+{
+	
+     setTimeout(function()
+     {
+     	if(z1>=0)
+     	{
+     		but.style.height=z1+"vh";
+	        but.style.width=z1+"vh";
+
+	        if(z1==0)
+	        {
+	        	but.style.display="none";
+	        	login.style.display="block";
+	        	initial.style.display="none";
+
+	        }
+	        z1=z1-1;
+	        
+	        zoom(z1);
+	         
+     	}
+     	else
+     		{return;}
+     },25);
+
+
+}
+function slide()
+{login=document.getElementById('login');
+initial=document.getElementById('initial');
+but=document.getElementById("circ_but");
+
+var ini=but.style.height;
+var x=ini.replace("vh","");
+var z=parseInt(x);
+zoom(z);
+
+
+}
+</script>
+<div style="display:block;" id="initial">
+<center><button id="circ_but" style="width:15vh; height:15vh; " onclick="slide()">C</button></center>
+</div>
+
+<div style="display:none;" id="login">
+<center><h1>LOGIN PAGE</h1></center>
+
+</div>
+</body>
+</html>
