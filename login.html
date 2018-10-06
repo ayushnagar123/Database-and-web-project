@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+	
+</head>
+<body>
+	<h1> <center> LOGIN PAGE </center></h1>
+<form>
+	UserId <input type="text" id="userid">
+	<br>
+	<br>
+	Password <input type="password" id="pass">
+	<br>
+	<br>
+	<input type="submit" id="submit" value="Login ! " onsubmit = "validate()">
+
+<script type="text/javascript">
+	function validate()
+	{
+		var id = document.getElementById(userid);
+			 if (id == null)
+			 {
+			 	window.alert("Enter your UserId !! ");
+			 	userid.style.background="Red";
+			 }
+		var p = document.getElementById(pass);
+			 if ( p==null)
+			 {
+			 	window.alert("Incorrect password !!  ");
+			 	pass.style.background="Red";
+			 }
+	}	
+	</script>
+</form>
+</body>
+</html>
