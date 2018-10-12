@@ -28,7 +28,7 @@ header{
 	margin:0px;
 	width:100vw;
 	height: 10vh;
-	background-color: #4a8dd1;
+	background-color: #004e92;
 }
 #opt{
     float:left;
@@ -38,7 +38,16 @@ header{
 }
 #show-page{
 	width:100vw;
-	height:100vh;
+	height:70vh;
+	position: absolute;
+	font-size: 1.8em;
+	color: white;
+	padding: 4vh;
+}
+#weather1{
+       color:white;
+       font-size: 1.4em;
+       text-shadow: 1px 2px 3px red;
 }
 #anim{
 	width: 100vw;
@@ -123,7 +132,44 @@ function news_disp()
 </ul>
 </div>
 <div id="show_page">
+<center>
+<?php
+@$html = file_get_contents("https://www.wunderground.com/weather/in/noida");// for getting the htmlusing @ on starting to avoid warnings 
+ // for getting the htmlusing @ on starting to avoid warnings 
+ $link= new DOMDocument();
+libxml_use_internal_errors(TRUE);//disable libxml errors
+if(!empty($html)){//check whether the html is returned or not
+              $link->loadHTML($html);
+	libxml_clear_errors(); //remove errors for yucky html
+	
+	$link_xpath = new DOMXPath($link);
+$temp = $link_xpath->query('//div[@class="feels-like"]/span[@class="temp"]');
+$image = $link_xpath->query('//div[@class="condition-icon small-6 medium-12 columns"]/img');
+$condition = $link_xpath->query('//div[@class="condition-icon small-6 medium-12 columns"]/p');
+echo "<div id='weather1'>";
+if($temp->length>0)
+{
+	$x=$temp[0]->nodeValue;
+	$f=(int)$x;
+	$c=($f-32)*5/9;
+	$c=(int)$c;
+	echo $c." Celsius";
+	}
+	
+if($image->length>0)
+{
+	$n=$image[0]->getAttribute('src');
+    echo "<img src='".$n."' height='70px' width='70px'></img>"."<br>"."<br>";
+}
+if($condition->length>0)
+{
+	echo "The weather outside is "."<b>".$condition[0]->nodeValue."</b>".". Enjoy your Day";
+}
+echo "</div>";
+}
 
+?>
+</center>
 </div>
 
 
