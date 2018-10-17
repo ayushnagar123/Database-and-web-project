@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>typing Animation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mali">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vibur">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script ">
+        <style>
+            body{
+                background:blue;
+                padding-top: 10px;
+                } 
+            #T_A{
+                color: white; 
+                font-family: "Courier";
+                font-size: 3vw;
+                margin: 10px 0 0 10px;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 20em;
+                animation: type 5s steps(80, end); 
+                /*font-family: "Concert Ones";*/
+                font-family: "Kaushan Script";
+                display: inline-block;
+                }
+            #T_A2{
+                animation: blink .8s infinite;
+                }
+            #T1{
+                text-align: center;
+                
+                }
+            @keyframes type{ 
+                from { width: 0%; } 
+                } 
+
+            @keyframes type2{
+                0%{width: 0%;}
+                50%{width: 0%;}
+                100%{ width: 0%; } 
+                } 
+
+            @keyframes blink{
+                to{opacity: 0;}
+                }
+
+           /* ::selection{
+                background: black;
+                }*/
+        </style>
+    </head>
+    <body>
+                             <div>
+                                <div id="T1">
+                                    <p id="T_A">CUSTOM<span id="T_A2"><b style="font-size:3.4vw">&nbspi&nbsp</b></span>ZED</p>
+                                </div>   
+                            </div>
+    </body>
+</html>
