@@ -16,6 +16,41 @@ header{
     color: white;
 
 }
+/* TYPING ANIMATIO STYLING*/
+            #T_A{
+                color: white; 
+                font-family: "Courier";
+                font-size: 3vw;
+                margin: 10px 0 0 10px;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 20em;
+                animation: type 5s steps(80, end); 
+                /*font-family: "Concert Ones";*/
+                font-family: "Kaushan Script";
+                display: inline-block;
+                }
+            #T_A2{
+                animation: blink .8s infinite;
+                }
+            #T1{
+                text-align: center;
+                
+                }
+            @keyframes type{ 
+                from { width: 0%; } 
+                } 
+
+            @keyframes type2{
+                0%{width: 0%;}
+                50%{width: 0%;}
+                100%{ width: 0%; } 
+                } 
+
+            @keyframes blink{
+                to{opacity: 0;}
+                }
+/* TYPING ANIMATIO STYLING OVER */
 #welcome{
   width:100vw;
   text-align: right;
@@ -116,12 +151,11 @@ function news_disp()
 }
 </script>
 
-
-
-<header>
-<div id="welcome">WELCOME MR KAPIL</div>
-<div id="weather"><center>ENJOY YOUR DAY</center></div>
-</header>
+<div>
+	<div id="T1">
+	    <p id="T_A">CUSTOM<span id="T_A2"><b style="font-size:3.4vw">&nbspi&nbsp</b></span>ZED</p>
+	</div>   
+</div>
 
 <div id="options">
 <ul type="none" id="opt">
