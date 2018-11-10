@@ -1,0 +1,81 @@
+body{
+margin:0px;
+}
+
+header{
+margin:0px;
+width:100vw;
+height:8vh;
+}
+
+#option{
+	float:right;
+
+    }
+
+#option li{
+	display:inline-block;
+    
+}
+#option button:hover
+{
+	background-color: black;
+	color: white;
+}
+#option ul{
+	margin-right: 2vw;
+}
+
+#text{
+	z-index: 1;
+	margin-top:15vh;
+position: absolute;
+	}
+
+#text p{
+	margin-left:6vw;
+	color: orange;
+	font-size: 1.9em;
+	font-family: fantasy;
+}
+#main{
+  width:100vw;
+  height: 91vh;
+  margin-top: 1vh;
+  z-index: 1;
+ }
+
+#sign_area{
+	background-color: #d3dae4;
+	opacity:0.6;
+	border:1px solid black;
+	display: none;
+	width:35vw;
+    height:35vh;
+    margin-top: 10vh;
+}
+#sign img{
+		height:40px;
+		width:40px;
+		margin-top:20px;
+	}
+
+#signup_area{
+	background-color:#989ba2;
+	opacity:0.6;
+	border:1px solid black;
+	display: none;
+	width:35vw;
+    height:35vh;
+    margin-top: 10vh;
+}
+  #signup{
+    display: none;
+    margin-top:3%;
+
+  }
+	#input
+	{
+		margin-top: 30px;
+			}
+
