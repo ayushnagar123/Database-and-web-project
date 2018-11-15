@@ -85,7 +85,7 @@
 <div id="sign_area">
 <div id="sign"><img src="sign.png"></div>
     <div id="input">
-    <form action=" " method="post">
+    <form action="start.php" method="post">
     <input type="text" placeholder="UserId">
     <br>
     <input type="password" placeholder="Password">
